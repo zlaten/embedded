@@ -1,0 +1,27 @@
+***IP adresi atama programı)***
+#include <SPI.h>
+#include <Ethernet.h>
+byte mac[] = {
+  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED
+};
+EthernetClient client;
+void setup() {
+Serial.begin(9600);
+ while (!Serial) {
+    ; 
+}
+  if (Ethernet.begin(mac) == 0) {
+Serial.println(" İnternet bağlantısı yapılamadı");
+  for (;;)
+      ;
+}
+Serial.print("Bana atanan IP adresim: ");
+  for (byte thisByte = 0; thisByte < 4; thisByte++) { Serial.print(Ethernet.localIP()[thisByte], DEC);
+Serial.print(“.”);
+}
+Serial.println();
+}
+
+void loop() {
+
+}
