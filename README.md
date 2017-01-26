@@ -1,4 +1,4 @@
-# embedded
+# embedded - (C - C++) - (Native Web App - HTML -CSS)
 SMART HOME AUTOMATION PROJECT via Ethernet Controller.
 This project used tools;
 Arduino Uno * 2,
